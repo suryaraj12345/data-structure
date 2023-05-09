@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+float marks[7], total_marks = 0, percentage;
+int i;
+for (i = 0; i < 7; i++) 
+{
+printf("Enter marks of subject %d: ", i+1);
+scanf("%f", &marks[i]);
+total_marks += marks[i];
+}
+percentage = (total_marks / 700) * 100;
+if (percentage >= 80) {
+printf("Division: Distinction\n");
+}
+else if (percentage >= 60 && percentage <= 79) 
+{
+printf("Division: First Division\n");
+}
+else if (percentage >= 45 && percentage <= 59) 
+{
+printf("Division: Second Division\n");
+}
+else if (percentage >= 32 && percentage <= 44) 
+{
+printf("Division: Third Division\n");
+}
+else 
+{
+printf("Division: Fail\n");
+}
+printf("Percentage: %.2f%%\n", percentage);
+return 0;
+}
